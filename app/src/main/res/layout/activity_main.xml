@@ -5,27 +5,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@android:color/white">
 
     <!-- Judul -->
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Katalog Produk"
+        android:text="Class List TTRPG Fabula Ultima"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:textColor="#2B4B42"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
-    <!-- Search -->
+    <!-- Tombol search -->
     <EditText
         android:id="@+id/etSearch"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Cari produk..."
+        android:hint="Cari class..."
+        android:textColor="@android:color/black"
+        android:textColorHint="#888888"
         android:minHeight="48dp"
         android:padding="10dp"
+        android:backgroundTint="#888888"
         app:layout_constraintTop_toBottomOf="@id/tvTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btnSearch"
@@ -40,7 +45,7 @@
         app:layout_constraintBottom_toBottomOf="@id/etSearch"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- List Katalog -->
+    <!-- List katalog -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvCatalog"
         android:layout_width="0dp"
