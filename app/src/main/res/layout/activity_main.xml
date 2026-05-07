@@ -56,4 +56,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"/>
 
+    <!--Tombol sorting-->
+    <Button
+        android:id="@+id/btnSortAZ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort A-Z"
+        app:layout_constraintTop_toBottomOf="@id/btnSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

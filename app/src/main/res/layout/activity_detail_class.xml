@@ -2,71 +2,183 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@android:color/white">
+    android:background="#F5F5F5">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <!-- Nama Class -->
-        <TextView
-            android:id="@+id/tvClassName"
+        <!-- Container nama class -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
+            android:orientation="vertical"
+            android:background="@drawable/border_bg"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvClassName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Class Name"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#2B4B42"/>
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginTop="8dp"
+                android:autoLink="web"
+                android:linksClickable="true"
+                android:textColorLink="#426476"/>
+        </LinearLayout>
+
+        <!-- Title skill -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skills"
             android:textStyle="bold"
-            android:paddingBottom="8dp"/>
-
-        <!-- Deskripsi -->
-        <TextView
-            android:id="@+id/tvDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:paddingBottom="16dp"/>
+            android:textSize="22sp"
+            android:textColor="#2B4B42"
+            android:layout_marginBottom="12dp"/>
 
         <!-- Skill 1 -->
-        <TextView
-            android:id="@+id/tvSkill1"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:paddingBottom="8dp"/>
+            android:orientation="vertical"
+            android:background="@drawable/border_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tvSkill1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#2B4B42"/>
+
+            <TextView
+                android:id="@+id/tvSkill1Detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
 
         <!-- Skill 2 -->
-        <TextView
-            android:id="@+id/tvSkill2"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:paddingBottom="8dp"/>
+            android:orientation="vertical"
+            android:background="@drawable/border_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tvSkill2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#2B4B42"/>
+
+            <TextView
+                android:id="@+id/tvSkill2Detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
 
         <!-- Skill 3 -->
-        <TextView
-            android:id="@+id/tvSkill3"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:paddingBottom="8dp"/>
+            android:orientation="vertical"
+            android:background="@drawable/border_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tvSkill3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#2B4B42"/>
+
+            <TextView
+                android:id="@+id/tvSkill3Detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
 
         <!-- Skill 4 -->
-        <TextView
-            android:id="@+id/tvSkill4"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:paddingBottom="8dp"/>
+            android:orientation="vertical"
+            android:background="@drawable/border_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tvSkill4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#2B4B42"/>
+
+            <TextView
+                android:id="@+id/tvSkill4Detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
 
         <!-- Skill 5 -->
-        <TextView
-            android:id="@+id/tvSkill5"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:paddingBottom="8dp"/>
+            android:orientation="vertical"
+            android:background="@drawable/border_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp">
 
+            <TextView
+                android:id="@+id/tvSkill5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#2B4B42"/>
+
+            <TextView
+                android:id="@+id/tvSkill5Detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
     </LinearLayout>
-
 </ScrollView>
