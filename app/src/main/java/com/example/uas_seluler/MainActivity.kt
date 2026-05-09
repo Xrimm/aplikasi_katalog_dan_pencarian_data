@@ -2,6 +2,7 @@ package com.example.uas_seluler
 
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,10 @@ import androidx.recyclerview.widget.GridLayoutManager
 import android.content.Intent
 
 class MainActivity : AppCompatActivity() {
+
+    companion object {
+        private const val TAG = "NIM_12345678"
+    }
 
     private lateinit var rvCatalog: RecyclerView
     private lateinit var etSearch: EditText
@@ -25,6 +30,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportActionBar?.hide()
+
+        Log.d(TAG, "MainActivity dibuka")
 
         rvCatalog = findViewById(R.id.rvCatalog)
         etSearch = findViewById(R.id.etSearch)
@@ -69,6 +76,7 @@ class MainActivity : AppCompatActivity() {
         adapter = FabulaUltimaAdapter(filteredList)
 
         adapter.onItemClick = { selectedItem ->
+            Log.d(TAG, "Class dipilih: ${selectedItem.nama}")
             val moveIntent = Intent(this, DetailClass::class.java)
             moveIntent.putExtra("EXTRA_CLASS", selectedItem.nama)
             startActivity(moveIntent)
@@ -79,9 +87,11 @@ class MainActivity : AppCompatActivity() {
         btnSearch.setOnClickListener {
 
             val keyword = etSearch.text.toString().lowercase()
+            Log.d(TAG, "Keyword search: $keyword")
 
             if (TextUtils.isEmpty(keyword)) {
                 etSearch.error = "Mau nyari class apa ni?"
+                Log.w(TAG, "Search kosong")
             } else {
                 etSearch.error = null
             }
@@ -93,6 +103,7 @@ class MainActivity : AppCompatActivity() {
             } else {
                 for (p in classList) {
                     if (p.nama.lowercase().contains(keyword)) {
+                        Log.i(TAG, "Ditemukan: ${p.nama}")
                         filteredList.add(p)
                     }
                 }
@@ -101,6 +112,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnSortAZ.setOnClickListener {
+            Log.d(TAG, "Sorting A-Z dijalankan")
 
             if (!isSorted) {
 
@@ -120,6 +132,7 @@ class MainActivity : AppCompatActivity() {
                         }
                     }
                 }
+                Log.i(TAG, "Data berhasil diurutkan A-Z")
 
                 isSorted = true
 
@@ -127,6 +140,7 @@ class MainActivity : AppCompatActivity() {
 
                 filteredList.clear()
                 filteredList.addAll(classList)
+                Log.i(TAG, "Urutan dikembalikan ke default")
 
                 isSorted = false
             }
