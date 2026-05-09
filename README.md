@@ -33,13 +33,11 @@ Aplikasi **Katalog Class dan Skill TTRPG Fabula Ultima** adalah aplikasi untuk m
 ---
 
 ## 3. Hasil Pencarian Data Class
-| :---: |
 <img src="screenshots/searching.jpeg" width="300"/>
 
 ---
 
 ## 4. Hasil Pengurutan Data Class
-| :---: |
 <img src="screenshots/sorting.jpeg" width="300"/>
 
 ---
